@@ -1,3 +1,5 @@
 - @posts.each do |post|
-	%h1= post.title
+	=link_to(post.title, post_path(post))
 	%h2= post.date
+
+=link_to("New Post", new_post_path)

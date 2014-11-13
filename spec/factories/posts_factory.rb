@@ -1,6 +1,8 @@
 FactoryGirl.define do
 	factory :post do
-		title "Sleep Timer"
+		sequence :title do |n|
+			"Sleep Timer pt#{n}"
+		end
 		date Date.today
 	end
 end
