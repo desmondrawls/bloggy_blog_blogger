@@ -1,2 +1,3 @@
 %h1= @post.title
 %h2= @post.date
+%p= @post.to_html.html_safe if @post.body

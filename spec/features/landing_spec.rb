@@ -30,7 +30,6 @@ feature "visiting /" do
 		fill_in 'post[body]', with: "**This is markup, I swear**"
 		click_on "Submit"
 		expect(current_path).to eq(post_path(Post.last))
-		save_and_open_page
 		expect(page.html).to include("<strong>This is markup, I swear</strong>")
 	end
 end
